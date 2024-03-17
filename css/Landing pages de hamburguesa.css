@@ -11,3 +11,20 @@
     box-sizing: border-box;
     font-family: 'Poppins'
 }
+body{
+    /* background-color: var(--color-primary); */
+}
+header{
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green;
+    position: fixed;
+}
+.about{
+    width: 100vw;
+    height: 100vh;
+    background-color: #1E1D2B;
+}
