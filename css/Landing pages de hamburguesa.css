@@ -195,6 +195,7 @@ nav ul{
     font-size: 2vw;
     color: var(--color-font);
 }
+
 .menu_imagenes{
 
     display: grid;
@@ -209,7 +210,6 @@ nav ul{
     height: 100%;
     padding: 1vw;
     background-color: var(--color-fondo);
-
 }
 
 .menu_imagenes .contenido_menu img{
