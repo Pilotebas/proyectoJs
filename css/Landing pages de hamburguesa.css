@@ -31,7 +31,7 @@ button:hover{
 }
 header{
     width: 100% ;
-    height: 15vh;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,12 +76,12 @@ nav ul{
 }
 
 .home{
-    padding-top: 15vh;
+    padding-top: 10vh;
 }
 
 .home > div{
     width: 100% ;
-    height: 85vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +92,6 @@ nav ul{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 7vw;
 }
 
 .home > div > div h2{
@@ -119,7 +118,8 @@ nav ul{
 }
 
 .home > div img{
-    width: 30vw;
+    padding-top: 10vw;
+    width: 40vw;
 }
 
 .about{
@@ -176,8 +176,7 @@ nav ul{
 
 .menu{
     width: 100vw;
-    height: 100vh;
-    margin-top: 15vh;
+    height: 90vh;
     justify-content: center;
     text-align: center;
     display: flex;
@@ -221,7 +220,7 @@ nav ul{
 
 .service{
     width: 100vw;
-    height: 85vh;
+    height: 95vh;
     margin-top: 15vh;
     text-align: center;
     justify-content: center;
@@ -262,4 +261,116 @@ nav ul{
     color: var(--color-font);
     font-size: 1vw;
     padding: 10px 20px 10px 20px
+}
+.contact{
+    width: 100vw;
+    height: 85vh;
+    margin-top: 15vh;
+}
+.contact_arriba{
+    width: 100vw;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact_arriba >div {
+    width: 70vw;
+    height: 40vh;
+    background-color: var(--color-fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact_arriba >div h1{
+    font-size: 2.5vw;
+    text-align: center;
+}
+.contact_arriba >div button{
+    width: 9vw;
+    height: 4vh;
+    font-size: 1vw;
+    background-color: var(--color-secundary);
+    border: var(--color-secundary);
+    color: var(--color-font);
+    margin-top: 1vw;
+}
+
+
+
+.contact_abajo{
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+.container_footer {
+    height: 100%;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.container_footer:last-child {
+    width: 10%;
+}
+
+.line {
+    height: 2px;
+    width: 30%;
+    background-color: var(--color-secundary);
+}
+
+.container_footer h3 {
+    color: var(--color-font);
+    font-size: 1.5vw;
+}
+
+.container_footer ul,
+.circles {
+    margin-top: 15px
+}
+
+.container_footer ul li {
+    list-style: none;
+    color: var(--color-font);
+    font-size: 1.1vw;
+}
+
+.container_footer ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--color-font);
+}
+
+.itemCircle {
+    width: 10%;
+}
+
+.itemCircle h3 {
+    color: var(--color-font);
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.lineContact {
+    height: 2px;
+    width: 40%;
+    background-color: var(--color-secundary);
+}
+
+.circles {
+    color: var(--color-secundary);
+    display: flex;
+    gap: 10px
+}
+
+.circles i {
+    font-size: 32px;
 }
