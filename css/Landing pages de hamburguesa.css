@@ -14,7 +14,8 @@
 body{
     background-color: var(--color-primary);
     width: 100vw;
-    font-family: 'Poppins'
+    font-family: 'Poppins'; 
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;
@@ -110,7 +111,7 @@ nav ul{
 }
 
 .home > div img{
-    width: 40vw;
+    width: 30vw;
 }
 
 .about{
