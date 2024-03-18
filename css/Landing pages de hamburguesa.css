@@ -21,10 +21,13 @@ li{
     list-style: none;
 }
 header{
+    width: 100vw;
+    height: 15vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 4vw;
+    position: fixed;
 }
 header h1{
     color: var(--color-secundary);
@@ -42,7 +45,6 @@ header nav ul li {
     display: flex;
     justify-content: center;
     font-size: 1.2vw;
-    font-weight: bold;
     cursor: pointer;
 }
 
@@ -60,4 +62,51 @@ nav ul{
     height: 6vw;
     width: 30vw;
     align-items: center;
+}
+
+.home{
+    padding-top: 15vh;
+}
+
+.home > div{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home > div > div{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 7vw;
+}
+
+.home > div > div h2{
+    color: var(--color-secundary);
+    font-size: 5vw;
+    word-spacing: 2vw;
+    font-weight: 500;
+}
+
+.home > div > div p{
+    color: var(--color-font);
+    font-size: 1.8vw;
+    padding-bottom: 1vw;
+    line-height: 2vw;
+}
+
+.home > div > div button{
+    width: 9vw;
+    height: 4vh;
+    background-color: var(--color-secundary);
+    border: var(--color-secundary);
+    color: var(--color-font);
+    font-size: 1vw;
+}
+
+.home > div img{
+    width: 40vw;
 }
