@@ -13,6 +13,9 @@
 <body>
     <header>
         <h1>Foods</h1>
+        <div class="menu_icon">
+            <i class='bx bx-menu'></i>
+        </div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -140,5 +143,14 @@
             </div>
         </article>
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuIcon = document.querySelector('.menu_icon');
+            const nav = document.querySelector('nav');
+            menuIcon.addEventListener('click', function() {
+                nav.classList.toggle('show'); 
+            });
+        });
+    </script>
 </body>
 </html>

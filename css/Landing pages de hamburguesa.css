@@ -24,7 +24,7 @@ li{
 }
 button{
     cursor: pointer;
-}
+}    
 button:hover{
     scale: 1.2;
     transition: 0.3s;
@@ -38,6 +38,9 @@ header{
     padding-left: 4vw;
     position: fixed;    
     background-color: var(--color-primary);
+}
+.menu_icon{
+    display: none;
 }
 header h1{
     color: var(--color-secundary);
@@ -374,7 +377,92 @@ nav ul{
     font-size: 32px;
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    header h1 {
+        margin-bottom: 20px;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    header #toggleMenu {
+        display: block;
+        margin-left: auto;
+        margin-right: 10px;
+        background: none;
+        border: none;
+        color: var(--color-font);
+        font-size: 28px;
+    }
+
+    header #toggleMenu:hover {
+        color: var(--color-secundary);
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin-top: 10px;
+        background-color: var(--color-menu-movil);
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header nav ul li a {
+        font-size: 18px;
+    }
+
+    .home > div {
+        flex-direction: column-reverse;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .menu {
+        padding-top: 20px;
+    }
+
+    .menu_imagenes {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .service {
+        padding-top: 20px;
+    }
+
+    .contenido_services {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .contact {
+        height: auto;
+    }
+
+    .contact_abajo {
+        flex-direction: column;
+    }
+
+    .container_footer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* @media (max-width: 500px) {
     *{
         margin: 0;
         padding: 0;
@@ -387,7 +475,6 @@ nav ul{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 0;
     }
     .home > div > div{
         width: 100vw;
@@ -406,4 +493,30 @@ nav ul{
         font-size: 4vh;
         line-height: 25px;
     }
-}
+    .home > div > div button{
+        margin-top: 3vh;
+        width: 18vh;
+        height: 5vh;
+        font-size: 2vh;
+    }
+    .home > div img{
+        width: 50vh;
+        height: 50vh;
+    };
+    .about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about > div{
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    }
+} */
