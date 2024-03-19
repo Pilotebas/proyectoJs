@@ -437,9 +437,9 @@ nav ul{
         line-height: 2.7vh;
     }
     .home > div > div button{
-        width: 15vh;
-        height: 3.4vh;
-        font-size: 1.5vh;
+        width: 20vh;
+        height: 5vh;
+        font-size: 2vh;
         text-align: center;
         margin-top: 2vh;
     }
@@ -484,11 +484,11 @@ nav ul{
         line-height: 2.2vh;
     }
     .about .contenido_about button{
-        margin-top: 2vh;
-        width: 15vh;
-        height: 3.4vh;
-        font-size: 1.5vh;
+        width: 20vh;
+        height: 5vh;
+        font-size: 2vh;
         text-align: center;
+        margin-top: 2vh;
     }
     .home > div img{
         width: 45vh;
@@ -547,8 +547,8 @@ nav ul{
         font-size: 2.5vh;
     }
     .service > h2{
-        width: 30vh;
-        font-size: 3vh;
+        width: 40vh;
+        font-size: 4vh;
         margin-top: 2vh;
     }
     .service .contenido_services {
@@ -575,14 +575,97 @@ nav ul{
     }
     .contact {
         height: auto;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .contact_abajo {
         flex-direction: column;
+        height: auto;
+    }
+    .contact_arriba{
+        height: 40vh;
+    }
+    .contact_arriba div{
+        width: 45vh;
+        height: 30vh;
+    }
+    .contact_arriba div h1{
+        font-size: 3.2vh;
+    }
+    .contact_arriba div button{
+        width: 20vh;
+        height: 5vh;
+        font-size: 2vh;
+        text-align: center;
+        margin-top: 2vh;
+    }
+    .contact_abajo{
+        margin-bottom: 0;
     }
 
     .container_footer {
-        width: 100%;
-        margin-bottom: 20px;
+        margin-left: 10vh;
+        height: auto;
+        width: 80%;
+        display: flex;
+    }
+
+    .container_footer:last-child {
+        width: 10%;
+    }
+
+    .line {
+        height: 4px;
+        width: 20%;
+        background-color: var(--color-secundary);
+    }
+
+    .lineContact {
+        height: 4px;
+        width: 40%;
+        background-color: var(--color-secundary);
+        align-self: start;
+    }
+
+    .container_footer h3 {
+        font-size: 7vw;
+    }
+
+    .container_footer ul,
+    .circulos {
+        margin-top: 15px
+    }
+
+
+    .container_footer ul li {
+        font-size: 4vw;
+    }
+
+    .itemCircle {
+        width: 40vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 5vh auto;
+    }
+
+    .itemCircle h3 {
+        font-size: 7vw;
+        color: var(--color-font);
+    }
+
+    .circles {
+        display: flex;
+        gap: 10px;
+        color: var(--color-secundary);
+    }
+
+    .circles i {
+        font-size: 32px;
     }
 }
