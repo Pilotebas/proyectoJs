@@ -379,34 +379,24 @@ nav ul{
 
 @media only screen and (max-width: 500px) {
     header {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         height: auto;
     }
 
     header h1 {
-        margin-bottom: 20px;
+        margin-top: 1vh;
+        font-size: 3vh;
     }
 
     nav {
         display: none;
         width: 100%;
     }
-
-    header #toggleMenu {
+    .menu_icon{
         display: block;
-        margin-left: auto;
-        margin-right: 10px;
-        background: none;
-        border: none;
-        color: var(--color-font);
-        font-size: 28px;
+        color: white;
     }
-
-    header #toggleMenu:hover {
-        color: var(--color-secundary);
-    }
-
     header nav ul {
         flex-direction: column;
         align-items: center;
@@ -425,11 +415,40 @@ nav ul{
     }
 
     .home > div {
-        flex-direction: column-reverse;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
     }
-
+    .home > div > div{
+        width: 90vw;
+        align-items: center;
+    }
+    .home > div > div h2{
+        width: 100%;
+        font-size: 7vh;
+        text-align: center;
+    }
+    .home > div > div p{
+        width: 100%;
+        font-size: 3vh;
+        text-align: center;
+        line-height: 2.7vh;
+    }
+    .home > div > div button{
+        width: 15vh;
+        height: 3.4vh;
+        font-size: 1.5vh;
+        text-align: center;
+        margin-top: 2vh;
+    }
     .about {
         flex-direction: column-reverse;
+    }
+    .home > div img{
+        width: 45vh;
+        height: 50vh;
     }
 
     .menu {
@@ -461,62 +480,3 @@ nav ul{
         margin-bottom: 20px;
     }
 }
-
-/* @media (max-width: 500px) {
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    body{
-        overflow-x: hidden;
-    }
-    .home > div{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .home > div > div{
-        width: 100vw;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-    }
-    .home > div > div h2{
-        font-size: 6vh;
-    }
-    .home > div > div p{
-        text-align: center;
-        font-size: 4vh;
-        line-height: 25px;
-    }
-    .home > div > div button{
-        margin-top: 3vh;
-        width: 18vh;
-        height: 5vh;
-        font-size: 2vh;
-    }
-    .home > div img{
-        width: 50vh;
-        height: 50vh;
-    };
-    .about{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .about > div{
-        width: 100vw;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-    }
-    }
-} */
