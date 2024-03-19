@@ -416,7 +416,7 @@ nav ul{
 
     .home > div {
         width: 100vw;
-        height: 100vh;
+        height: 90vh;
         flex-direction: column;
         align-items: center;
         justify-content: start;
@@ -445,6 +445,50 @@ nav ul{
     }
     .about {
         flex-direction: column-reverse;
+        margin: 0;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .about .imagen{
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about .imagen img{
+        width: 45vh;
+        height: 40vh;
+    }
+    .about .contenido_about{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about .contenido_about h1{
+        font-size: 3vh;
+        text-align: center;
+    }
+    .about .contenido_about h2{
+        font-size: 4vh;
+        text-align: center;
+    }
+    .about .contenido_about p{
+        margin-top: 2vh;
+        font-size: 2vh;
+        text-align: center;
+        line-height: 2.2vh;
+    }
+    .about .contenido_about button{
+        margin-top: 2vh;
+        width: 15vh;
+        height: 3.4vh;
+        font-size: 1.5vh;
+        text-align: center;
     }
     .home > div img{
         width: 45vh;
@@ -452,21 +496,83 @@ nav ul{
     }
 
     .menu {
-        padding-top: 20px;
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    .menu > p{
+        font-size: 3vh;
+    }
+    .menu h2{
+        width: 30vh;
+        font-size: 4vh;
     }
 
-    .menu_imagenes {
-        grid-template-columns: repeat(1, 100%);
+    .menu .menu_imagenes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .service {
         padding-top: 20px;
     }
-
-    .contenido_services {
-        grid-template-columns: repeat(1, 100%);
+    .menu_imagenes .contenido_menu{
+        width: 35vh;
+        height: 40vh;
     }
-
+    .menu_imagenes .contenido_menu p{
+        font-size: 2.5vh;
+    }
+    .menu_imagenes .contenido_menu p:last-child{
+        color: var(--color-secundary);
+    }
+    .menu .menu_imagenes .contenido_menu img{
+        width: 25vh;
+        height: 25vh;
+    }
+    .service{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10vh;
+    }
+    .service > p{
+        font-size: 2.5vh;
+    }
+    .service > h2{
+        width: 30vh;
+        font-size: 3vh;
+        margin-top: 2vh;
+    }
+    .service .contenido_services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .service .contenido_services .imagenes_services{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3vh;
+    }
+    .service .contenido_services .imagenes_services img{
+        width: 25vh;
+        height: 25vh;
+    }
+    .service .contenido_services .imagenes_services b{
+        font-size: 2.5vh;
+    }
+    .service .contenido_services .imagenes_services p{
+        font-size: 2.8vh;
+    }
     .contact {
         height: auto;
     }
