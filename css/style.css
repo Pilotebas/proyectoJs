@@ -3,3 +3,104 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100vh;
+}
+header {
+    width: 23vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.contenido{
+    width: 75vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+}
+.contenido h1{
+    width: 20vw;
+    height: 8vh;
+    color: white;
+    font-size: 2vw;
+    padding-top: 1vw;
+    padding-left: 1vw;
+}
+.contenido > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vw;
+}
+.contenido > div .item_1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16vw;
+    height: 35vh;
+    background-color: gray;
+}
+.contenido > div .item_2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16vw;
+    height: 35vh;
+    background-color: green;
+}
+.contenido > div .item_3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16vw;
+    height: 35vh;
+    background-color: pink;
+}
+.contenido > div .item_4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16vw;
+    height: 35vh;
+    background-color: black;
+}
+.contenido > div .item_5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16vw;
+    height: 35vh;
+    background-color: gray;
+}
+.contenido > div .item_6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16vw;
+    height: 35vh;
+    background-color: green;
+}
+.contenido > div .item_7{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16vw;
+    height: 35vh;
+    background-color: pink;
+}
+.contenido > div .item_8{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16vw;
+    height: 35vh;
+    background-color: black;
+}
