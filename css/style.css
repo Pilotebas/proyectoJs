@@ -13,9 +13,30 @@ header {
     width: 23vw;
     height: 85vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     background-color: black;
+}   
+header .header_titulo{
+    width: 18vw;
+    height: 10vh;
+    background-color: brown;
+}
+header .header_contenido{
+    width: 18vw;
+    height: 30vh;
+    background-color: brown;
+}
+header .header_carrito{
+    width: 18vw;
+    height: 10vh;
+    background-color: brown;
+}
+header .header_logo{
+    width: 18vw;
+    height: 10vh;
+    background-color: brown;
 }
 .contenido{
     width: 75vw;
