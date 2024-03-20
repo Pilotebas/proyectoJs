@@ -150,6 +150,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div > section .imagen_1:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/buso1.1);
 }
 .contenido > div section .imagen_2{
@@ -163,6 +164,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div > section .imagen_2:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/buso2.2);
 }
 .contenido > div section .imagen_3{
@@ -176,6 +178,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div > section .imagen_3:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/buso3.1);
 }
 .contenido > div section .imagen_4{
@@ -189,6 +192,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div > section .imagen_4:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/buso4.1);
 }
 .contenido > div section .imagen_5{
@@ -202,6 +206,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div > section .imagen_5:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/buso5.1);
 }
 .contenido > div section .imagen_6{
@@ -215,6 +220,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div > section .imagen_6:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/buso6.1);
 }
 .contenido > div section .imagen_7{
@@ -228,6 +234,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div > section .imagen_7:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/busp7.1);
 }
 .contenido > div section .imagen_8{
@@ -241,6 +248,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div > section .imagen_8:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/buso8.1);
 }
 .contenido > div > section .imagen_9{
@@ -268,6 +276,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div section .imagen_10:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/camisa2.1);
 }
 .contenido > div section .imagen_11{
@@ -281,6 +290,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div section .imagen_11:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/camisa3.1);
 }
 .contenido > div section .imagen_12{
@@ -294,6 +304,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div section .imagen_12:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/camisa4.1);
 }
 .contenido > div section .imagen_13{
@@ -307,6 +318,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div section .imagen_13:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/camisa5.1);
 }
 .contenido > div section .imagen_14{
@@ -320,6 +332,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div section .imagen_14:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/camisa6.1);
 }
 .contenido > div section .imagen_15{
@@ -333,6 +346,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div section .imagen_15:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/camisa7.1);
 }
 .contenido > div section .imagen_16{
@@ -346,6 +360,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div section .imagen_16:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/camisa8.1);
 }
 .contenido > div > section .imagen_17{
@@ -359,6 +374,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div > section .imagen_17:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/pants1.1);
 }
 .contenido > div section .imagen_18{
@@ -372,6 +388,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div > section .imagen_18:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/pants2.2);
 }
 .contenido > div section .imagen_19{
@@ -385,6 +402,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div > section .imagen_19:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/pants3.1);
 }
 .contenido > div section .imagen_20{
@@ -398,6 +416,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div > section .imagen_20:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/pants4.1);
 }
 .contenido > div section .imagen_21{
@@ -411,6 +430,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div > section .imagen_21:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/pants5.1);
 }
 .contenido > div section .imagen_22{
@@ -424,6 +444,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div > section .imagen_22:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/pants6.1);
 }
 .contenido > div section .imagen_23{
@@ -436,6 +457,7 @@ header .header_logo > h1{
     border-radius: 1vw;
 }
 .contenido > div > section .imagen_23:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/pants7.1);
 }
 .contenido > div section .imagen_24{
@@ -449,6 +471,7 @@ header .header_logo > h1{
     cursor: pointer;
 }
 .contenido > div > section .imagen_24:hover{
+    transition: 0.6s;
     background-image: url(../storage/img/pants8.1);
 }
 .contenido > div > section .item_contenido{
