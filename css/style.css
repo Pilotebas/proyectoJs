@@ -8,47 +8,113 @@ body {
     flex-direction: row;
     align-items: center;
     height: 100vh;
+    background-color: #C5E0F6;
+}
+a{
+    text-decoration: none;
 }
 header {
     width: 23vw;
-    height: 85vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
 }   
 header .header_titulo{
     width: 18vw;
     height: 10vh;
-    background-color: brown;
+}
+header .header_titulo > h1{
+    padding-top: 1vw;
+    font-size: 3vw;
 }
 header .header_contenido{
     width: 18vw;
-    height: 30vh;
-    background-color: brown;
+    height: 25vh;
+}
+header .header_contenido ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+header .header_contenido a{
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+    cursor: pointer;
+    border-radius: 1vw;
+    color: black;
+}
+header .header_contenido a:hover{
+    background-color: #F6F6F6;
+    scale: 1.05;
+}
+header .header_contenido a i{
+    font-size: 1.7vw;
+    margin-left: 1vw;
+}
+header .header_contenido a h1{
+    font-size: 1.5vw;
 }
 header .header_carrito{
     width: 18vw;
-    height: 10vh;
-    background-color: brown;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+}
+header .header_carrito:hover{
+    background-color: #F6F6F6;
+    border-radius: 1vw;
+    scale: 1.05;
+}
+header .header_carrito i{
+    font-size: 2vw;
+    color: black;
+    margin-left: 1vw;
+}
+header .header_carrito > h1{
+    font-size: 1.5vw;
+    padding-left: 1vw;
+    padding-right: 2vw;
+    color: black
+}
+header .header_carrito > h2{
+    display: flex;
+    width: 15%;
+    height: 50%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5vw;
+    color: black;
+    font-size: 1.3vw;
 }
 header .header_logo{
     width: 18vw;
     height: 10vh;
-    background-color: brown;
+}
+header .header_logo > h1{
+    text-align: center;
+    font-size: 1.5vw;
+    padding-bottom: 1vw;
 }
 .contenido{
     width: 75vw;
-    height: 85vh;
+    height: 82vh;
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    background-color: #F6F6F6;
+    border-radius: 2vw;
 }
 .contenido > h1{
     width: 20vw;
     height: 8vh;
-    color: white;
+    color: black;
     font-size: 2vw;
     padding-top: 1vw;
     padding-left: 1vw;
@@ -62,79 +128,236 @@ header .header_logo{
     flex-wrap: wrap;
     justify-content: center;
     gap: 1vw;
+    overflow-y: scroll;
 }
-.contenido > div .item_1{
+.contenido > div > section{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 17.5vw;
     height: 35vh;
-    background-color: gray;
+    border-radius: 1vw;
+    border: 1px solid black;
 }
-.contenido > div .item_2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 17.5vw;
-    height: 35vh;
-    background-color: green;
-}
-.contenido > div .item_3{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 17.5vw;
-    height: 35vh;
-    background-color: pink;
-}
-.contenido > div .item_4{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 17.5vw;
-    height: 35vh;
-    background-color: yellow;
-}
-.contenido > div .item_5{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 17.5vw;
-    height: 35vh;
-    background-color: gray;
-}
-.contenido > div .item_6{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 17.5vw;
-    height: 35vh;
-    background-color: green;
-}
-.contenido > div .item_7{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 17.5vw;
-    height: 35vh;
-    background-color: pink;
-}
-.contenido > div .item_8{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 17.5vw;
-    height: 35vh;
-    background-color: yellow;
-}
-.contenido > div section .imagen{
+.contenido > div > section .imagen_1{
     width: 17vw;
-    height: 25vh;
-    background-color: azure;
+    height: 27vh;
+    background-image: url(../storage/img/buso1);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_2{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/buso2);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_3{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/buso3);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_4{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/buso4);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_5{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/buso5);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_6{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/buso6);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_7{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/buso7);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_8{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/buso8);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div > section .imagen_9{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/camisa1);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_10{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/camisa2);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_11{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/camisa3);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_12{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/camisa4);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_13{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/camisa5);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_14{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/camisa6);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_15{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/camisa7);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_16{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/camisa8);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div > section .imagen_17{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/pants1);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_18{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/pants2);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_19{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/pants3);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_20{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/pants4);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_21{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/pants5);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_22{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/pants6);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_23{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/pants7);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
+}
+.contenido > div section .imagen_24{
+    width: 17vw;
+    height: 27vh;
+    background-image: url(../storage/img/pants8);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 1vw;
 }
 .contenido > div > section .item_contenido{
-    width: 17vw;
-    height: 10vh;
+    width: 17.5vw;
+    height: 8vh;
     background-color: black;
     border-radius: 1vw;
 }
@@ -164,7 +387,16 @@ header .header_logo{
     font-size: 1vw;
 }
 .contenido > div section .item_contenido > div > button{
-    width: 40%;
-    height: 3vh;
+    width: 35%;
+    height: 3.5vh;
     font-size: 1vw;
+    border-radius: 1vw;
+    background-color: F6F6F6;
+    cursor: pointer;
+    border: none;
+    background-color: #F6F6F6;
+}
+.contenido > div section .item_contenido > div > button:hover{
+    scale: 1.1;
+    background-color: #C5E0F6;
 }
