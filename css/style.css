@@ -45,7 +45,7 @@ header .header_logo{
     flex-direction: column;
     background-color: blue;
 }
-.contenido h1{
+.contenido > h1{
     width: 20vw;
     height: 8vh;
     color: white;
@@ -54,9 +54,11 @@ header .header_logo{
     padding-left: 1vw;
 }
 .contenido > div{
+    margin: 0 auto;
+    width: 75vw;
+    height: 73vh;
     display: flex;
     flex-direction: row;
-    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1vw;
@@ -65,7 +67,7 @@ header .header_logo{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 16vw;
+    width: 17.5vw;
     height: 35vh;
     background-color: gray;
 }
@@ -73,7 +75,7 @@ header .header_logo{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 16vw;
+    width: 17.5vw;
     height: 35vh;
     background-color: green;
 }
@@ -81,7 +83,7 @@ header .header_logo{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 16vw;
+    width: 17.5vw;
     height: 35vh;
     background-color: pink;
 }
@@ -89,15 +91,15 @@ header .header_logo{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 16vw;
+    width: 17.5vw;
     height: 35vh;
-    background-color: black;
+    background-color: yellow;
 }
 .contenido > div .item_5{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 16vw;
+    width: 17.5vw;
     height: 35vh;
     background-color: gray;
 }
@@ -105,7 +107,7 @@ header .header_logo{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 16vw;
+    width: 17.5vw;
     height: 35vh;
     background-color: green;
 }
@@ -113,7 +115,7 @@ header .header_logo{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 16vw;
+    width: 17.5vw;
     height: 35vh;
     background-color: pink;
 }
@@ -121,7 +123,48 @@ header .header_logo{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 16vw;
+    width: 17.5vw;
     height: 35vh;
+    background-color: yellow;
+}
+.contenido > div section .imagen{
+    width: 17vw;
+    height: 25vh;
+    background-color: azure;
+}
+.contenido > div > section .item_contenido{
+    width: 17vw;
+    height: 10vh;
     background-color: black;
+    border-radius: 1vw;
+}
+.contenido > div section .item_contenido > h1{
+    padding: 0;
+    width: 7vw;
+    height: 50%;
+    font-size: 1vw;
+    color: white;
+    padding-left: 1vw;
+    padding-top: 0.5vw;
+}
+.contenido > div section .item_contenido > div{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start ;
+}
+.contenido > div section .item_contenido > div > h1{
+    margin-left: 1vw;
+    color: white;
+    padding: 0;
+    width: 50%;
+    height: 100%;
+    font-size: 1vw;
+}
+.contenido > div section .item_contenido > div > button{
+    width: 40%;
+    height: 3vh;
+    font-size: 1vw;
 }
