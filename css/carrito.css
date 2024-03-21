@@ -135,13 +135,13 @@ header .header_logo > h1{
     flex-direction: row;
     align-items: center;
     width: 90%;
-    height: 30%;
+    height: 20%;
     border-radius: 1vw;
     border: 1px solid black;
 }
 .contenido > div > section .imagen_1{
-    width: 13vw;
-    height: 20vh;
+    width: 10vw;
+    height: 15vh;
     background-image: url(../storage/img/buso1);
     background-repeat: no-repeat;
     background-size: cover;
@@ -154,8 +154,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/buso1.1);
 }
 .contenido > div > section .imagen_9{
-    width: 13vw;
-    height: 20vh;
+    width: 10vw;
+    height: 15vh;
     background-image: url(../storage/img/camisa1);
     background-repeat: no-repeat;
     background-size: cover;
@@ -168,8 +168,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/camisa1.1);
 }
 .contenido > div > section .imagen_17{
-    width: 13vw;
-    height: 20vh;
+    width: 10vw;
+    height: 15vh;
     background-image: url(../storage/img/pants1);
     background-repeat: no-repeat;
     background-size: cover;
