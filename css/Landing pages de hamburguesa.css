@@ -39,8 +39,13 @@ header{
     position: fixed;    
     background-color: var(--color-primary);
 }
-.menu_icon{
+label{
     display: none;
+}
+.menu_icon{
+    color: var(--color-secundary);
+    width: 8vw;
+    font-size: 7vw;
 }
 header h1{
     color: var(--color-secundary);
@@ -49,6 +54,7 @@ header h1{
 
 header nav{
     margin-right: 5vw;
+    
 }
 header nav ul{
     display: flex;
@@ -392,10 +398,26 @@ nav ul{
     nav {
         display: none;
         width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        background-color: var(--color-menu-movil);
+        padding: 1rem;
+        transition: all 0.3s ease;
     }
     .menu_icon{
         display: block;
         color: white;
+        z-index: 999;
+        position: fixed;
+        top: 1vh;
+        right: 1vw;
+        font-size: 4vh;
+        cursor: pointer;
+    }
+    #check:checked+nav{
+        display: flex;
     }
     header nav ul {
         flex-direction: column;
