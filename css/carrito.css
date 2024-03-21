@@ -140,8 +140,8 @@ header .header_logo > h1{
     border: 1px solid black;
 }
 .contenido > div > section .imagen_1{
-    width: 10vw;
-    height: 15vh;
+    width: 100%;
+    height: 100%;
     background-image: url(../storage/img/buso1);
     background-repeat: no-repeat;
     background-size: cover;
@@ -154,8 +154,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/buso1.1);
 }
 .contenido > div > section .imagen_9{
-    width: 10vw;
-    height: 15vh;
+    width: 100%;
+    height: 100%;
     background-image: url(../storage/img/camisa1);
     background-repeat: no-repeat;
     background-size: cover;
@@ -168,8 +168,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/camisa1.1);
 }
 .contenido > div > section .imagen_17{
-    width: 10vw;
-    height: 15vh;
+    width: 100%;
+    height: 100%;
     background-image: url(../storage/img/pants1);
     background-repeat: no-repeat;
     background-size: cover;
@@ -351,5 +351,97 @@ header .header_logo > h1{
     }
     header .header_logo {
         display: none;
+    }
+    .contenido{
+        width: 90vw;
+        height: 88vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #F6F6F6;
+        border-radius: 2vw;
+    }
+    .contenido > h1{
+        width: 100%;
+        height: 5vh;
+        font-size: 3vh;
+    }
+    .contenido > div{
+        margin: 0 auto;
+        width: 85vw;
+        height: 81vh;
+        overflow-y: scroll;
+    }
+    .contenido > h1{
+        width: 100%;
+        height: 10vh;
+        font-size: 5vh;
+    }
+    .contenido > div{
+        width: 100%;
+        height: 80vh;
+    }
+    .contenido > div section .item_contenido{
+        display: flex;
+    }
+    .name h1, .precio h1, .subtotal h1{
+        display: none;
+    }
+    .name h2{
+        font-size: 2vh;
+    }
+    .cantidad h1{
+        padding-left: 2vh;
+        font-size: 2vh;
+    }
+    .subtotal h2{
+        font-size: 2vh;
+    }
+    .contenido > div section .item_contenido .eliminar a{
+        width: 5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 15vh;
+        align-self: center;
+        font-size: 4vh;
+        color: red  ;
+        cursor: pointer;
+    }
+    .botones{
+        width: 80%;
+        height: 20vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .botones > a{
+        width: 20vh;
+        height: 6vh;
+        font-size: 3vh;
+    }
+    .botones > a:hover{
+        scale: 1.05;
+    }
+    .botones > div{
+        width: 20vh;
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1vw;
+        color: black;
+    }
+    .botones > div h1{
+        display: none;
+    }
+    .botones > div a{
+        width: 20vh;
+        height: 6vh;
+        font-size: 3vh;
+    }
+    .botones > div a:hover{
+        scale: 1.05;
     }
 }
