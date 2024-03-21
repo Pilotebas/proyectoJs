@@ -218,7 +218,7 @@ header .header_logo > h1{
     justify-content: center;
     gap: 1vw;
 }
-.contenido > div section .item_contenido .eliminar{
+.contenido > div section .item_contenido .eliminar a{
     width: 5vw;
     display: flex;
     flex-direction: column;
@@ -227,6 +227,7 @@ header .header_logo > h1{
     align-self: center;
     font-size: 2.5vw;
     color: red  ;
+    cursor: pointer;
 }
 .botones{
     width: 80%;
