@@ -526,53 +526,77 @@ header .header_logo > h1{
         flex-direction: column;
     }
     header {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: auto;
-    }
-    .header_contenido {
+        width: 100vw;
+        height: 10vh;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
+        flex-direction: row;
+        align-items: start;
+    }   
+    header .header_titulo{
+        width: 18vh;
+        height: 4vh;
+    }
+    header .header_titulo > h1{
+        font-size: 3vh;
+    }
+    header .header_contenido{
+        position: absolute;
+        margin-left: 25vw;
+        width: 30vh;
+        height: 10vh;
+    }
+    header .header_contenido ul{
         width: 100%;
-    }
-    .contenido {
-        width: 100%; /* Ajustar el ancho del contenido */
-        padding: 20px; /* Añadir espacio alrededor del contenido */
-    }
-    .contenido > h1 {
-        font-size: 24px; /* Tamaño de letra para el encabezado */
-    }
-    .contenido > div {
+        height: 100%;
         display: flex;
-        flex-wrap: wrap;
-        gap: 20px; /* Espacio entre elementos */
+        flex-direction: row;
+        align-items: end;
+    }
+    header .header_contenido a{
+        width: 25%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
+        border-radius: 1vw;
+        color: black;
     }
-    .contenido > div > section {
-        width: calc(50% - 20px); /* Ancho del elemento, menos el espacio entre ellos */
-        margin-bottom: 20px; /* Espacio inferior entre elementos */
+    header .header_contenido a i{
+        font-size: 4vh;
     }
-    .contenido > div > section .imagen_1,
-    /* ... Repetir para todas las imágenes */
-    .contenido > div > section .imagen_24 {
-        width: 100%; /* Ancho completo de las imágenes */
-        height: 200px; /* Altura fija para las imágenes */
-        border-radius: 10px; /* Radio de borde para las imágenes */
+    header .header_contenido a h1{
+        display: none;
     }
-    .contenido > div > section .item_contenido {
-        width: 100%; /* Ancho completo para el contenido */
-        padding: 10px; /* Añadir espacio alrededor del contenido */
-        background-color: #F6F6F6; /* Color de fondo para el contenido */
+    header .header_carrito{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .contenido > div > section .item_contenido > h1 {
-        font-size: 18px; /* Tamaño de letra para el texto */
-        margin-bottom: 5px; /* Espacio inferior entre texto y botón */
+    header .header_carrito:hover{
+        background-color: #AED6F1;
+        scale: none;
     }
-    .contenido > div > section .item_contenido > div > h1,
-    .contenido > div > section .item_contenido > div > button {
-        font-size: 14px; /* Tamaño de letra para el texto y botones */
+    header .header_carrito i{
+        width: 70%;
+        height: 50%;
+        font-size: 4vh;
+        border-radius: 1vw;
+        text-align: center;
+    }
+    header .header_carrito i:hover{
+        background-color: #F6F6F6;
+        scale: 1.02;
+    }
+    header .header_carrito > h1{
+        display: none;
+    }
+    header .header_carrito > h2{
+        display: none;
+    }
+    header .header_logo {
+        display: none;
     }
 }
