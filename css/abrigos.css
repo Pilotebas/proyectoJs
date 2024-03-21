@@ -139,8 +139,8 @@ header .header_logo > h1{
     border: 1px solid black;
 }
 .contenido > div > section .imagen_1{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/buso1);
     background-repeat: no-repeat;
     background-size: cover;
@@ -153,8 +153,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/buso1.1);
 }
 .contenido > div section .imagen_2{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/buso2);
     background-repeat: no-repeat;
     background-size: cover;
@@ -167,8 +167,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/buso2.2);
 }
 .contenido > div section .imagen_3{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/buso3);
     background-repeat: no-repeat;
     background-size: cover;
@@ -181,8 +181,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/buso3.1);
 }
 .contenido > div section .imagen_4{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/buso4);
     background-repeat: no-repeat;
     background-size: cover;
@@ -195,8 +195,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/buso4.1);
 }
 .contenido > div section .imagen_5{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/buso5);
     background-repeat: no-repeat;
     background-size: cover;
@@ -209,8 +209,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/buso5.1);
 }
 .contenido > div section .imagen_6{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/buso6);
     background-repeat: no-repeat;
     background-size: cover;
@@ -223,8 +223,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/buso6.1);
 }
 .contenido > div section .imagen_7{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/buso7);
     background-repeat: no-repeat;
     background-size: cover;
@@ -237,8 +237,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/busp7.1);
 }
 .contenido > div section .imagen_8{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/buso8);
     background-repeat: no-repeat;
     background-size: cover;
@@ -251,8 +251,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/buso8.1);
 }
 .contenido > div > section .imagen_9{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/camisa1);
     background-repeat: no-repeat;
     background-size: cover;
@@ -265,8 +265,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/camisa1.1);
 }
 .contenido > div section .imagen_10{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/camisa2);
     background-repeat: no-repeat;
     background-size: cover;
@@ -279,8 +279,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/camisa2.1);
 }
 .contenido > div section .imagen_11{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/camisa3);
     background-repeat: no-repeat;
     background-size: cover;
@@ -293,8 +293,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/camisa3.1);
 }
 .contenido > div section .imagen_12{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/camisa4);
     background-repeat: no-repeat;
     background-size: cover;
@@ -307,8 +307,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/camisa4.1);
 }
 .contenido > div section .imagen_13{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/camisa5);
     background-repeat: no-repeat;
     background-size: cover;
@@ -321,8 +321,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/camisa5.1);
 }
 .contenido > div section .imagen_14{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/camisa6);
     background-repeat: no-repeat;
     background-size: cover;
@@ -335,8 +335,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/camisa6.1);
 }
 .contenido > div section .imagen_15{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/camisa7);
     background-repeat: no-repeat;
     background-size: cover;
@@ -349,8 +349,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/camisa7.1);
 }
 .contenido > div section .imagen_16{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/camisa8);
     background-repeat: no-repeat;
     background-size: cover;
@@ -363,8 +363,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/camisa8.1);
 }
 .contenido > div > section .imagen_17{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/pants1);
     background-repeat: no-repeat;
     background-size: cover;
@@ -377,8 +377,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/pants1.1);
 }
 .contenido > div section .imagen_18{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/pants2);
     background-repeat: no-repeat;
     background-size: cover;
@@ -391,8 +391,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/pants2.2);
 }
 .contenido > div section .imagen_19{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/pants3);
     background-repeat: no-repeat;
     background-size: cover;
@@ -405,8 +405,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/pants3.1);
 }
 .contenido > div section .imagen_20{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/pants4);
     background-repeat: no-repeat;
     background-size: cover;
@@ -419,8 +419,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/pants4.1);
 }
 .contenido > div section .imagen_21{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/pants5);
     background-repeat: no-repeat;
     background-size: cover;
@@ -433,8 +433,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/pants5.1);
 }
 .contenido > div section .imagen_22{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/pants6);
     background-repeat: no-repeat;
     background-size: cover;
@@ -447,8 +447,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/pants6.1);
 }
 .contenido > div section .imagen_23{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/pants7);
     background-repeat: no-repeat;
     background-size: cover;
@@ -460,8 +460,8 @@ header .header_logo > h1{
     background-image: url(../storage/img/pants7.1);
 }
 .contenido > div section .imagen_24{
-    width: 17vw;
-    height: 31vh;
+    width: 100%;
+    height: 80%;
     background-image: url(../storage/img/pants8);
     background-repeat: no-repeat;
     background-size: cover;
@@ -597,5 +597,50 @@ header .header_logo > h1{
     }
     header .header_logo {
         display: none;
+    }
+    .contenido{
+        width: 90vw;
+        height: 88vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #F6F6F6;
+        border-radius: 2vw;
+    }
+    .contenido > h1{
+        width: 100%;
+        height: 5vh;
+        font-size: 3vh;
+    }
+    .contenido > div{
+        margin: 0 auto;
+        width: 85vw;
+        height: 81vh;
+        overflow-y: scroll;
+    }
+    .contenido > div > section{
+        width: 80%;
+        height: 40vh;
+    }
+    .contenido > div > section > div{
+        width: 100%;
+        height: 34vh;
+        background-size: cover;
+    }
+    .contenido > div > section .item_contenido{
+        width: 100%;
+    }
+    .contenido > div section .item_contenido > h1{
+        width: 100%;
+        font-size: 2vh;
+    }
+    .contenido > div section .item_contenido > div > h1{
+        font-size: 2vh;
+    }
+    .contenido > div section .item_contenido > div > button{
+        font-size: 2vh;
+    }
+    .contenido > div section .item_contenido > div > button:hover{
+        scale: 1.1;
+        background-color: #C5E0F6;
     }
 }
