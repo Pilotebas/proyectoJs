@@ -153,34 +153,6 @@ header .header_logo > h1{
     transition: 0.6s;
     background-image: url(../storage/img/buso1.1);
 }
-.contenido > div > section .imagen_9{
-    width: 10vw;
-    height: 15vh;
-    background-image: url(../storage/img/camisa1);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 1vw;
-    cursor: pointer;
-}
-.contenido > div > section .imagen_9:hover{
-    transition: 0.6s;
-    background-image: url(../storage/img/camisa1.1);
-}
-.contenido > div > section .imagen_17{
-    width: 10vw;
-    height: 15vh;
-    background-image: url(../storage/img/pants1);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 1vw;
-    cursor: pointer;
-}
-.contenido > div > section .imagen_17:hover{
-    transition: 0.6s;
-    background-image: url(../storage/img/pants1.1);
-}
 .contenido > div section .item_contenido{
     display: flex;  
     gap: 3vw;
