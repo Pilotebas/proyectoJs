@@ -207,4 +207,22 @@ header .header_logo > h1{
     header .header_logo {
         display: none;
     }
+    .contenido{
+        width: 90vw;
+        height: 88vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #F6F6F6;
+        border-radius: 2vw;
+    }
+    .contenido > h1{
+        width: 100%;
+        height: 5vh;
+        font-size: 5vh;
+    }
+    .contenido > h2{
+        padding-top: 15px;
+        width: 100%;
+        font-size: 3vh;
+    }
 }
