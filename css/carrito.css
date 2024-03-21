@@ -12,6 +12,7 @@ body {
 }
 a{
     text-decoration: none;
+    color: black;
 }
 header {
     width: 23vw;
@@ -184,4 +185,46 @@ header .header_logo > h1{
 .contenido > div section .item_contenido{
     display: flex;  
     gap: 3vw;
+}
+.contenido > div section .item_contenido .name{
+    width: 10vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vw;
+}
+.contenido > div section .item_contenido .cantidad{
+    width: 10vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vw;
+}
+.contenido > div section .item_contenido .precio{
+    width: 10vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vw;
+}
+.contenido > div section .item_contenido .subtotal{
+    width: 10vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vw;
+}
+.contenido > div section .item_contenido .eliminar{
+    width: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 15vh;
+    align-self: center;
+    font-size: 2.5vw;
+    color: red  ;
 }
