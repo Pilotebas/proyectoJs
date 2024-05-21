@@ -1,3 +1,6 @@
+import {getAllabrigos} from "../modules/modules.js"
+import {getAllcamiseta} from "../modules/modules.js"
+import {getAllpantalon} from "../modules/modules.js"
 class MyItem extends HTMLElement {
     constructor() {
         super();
