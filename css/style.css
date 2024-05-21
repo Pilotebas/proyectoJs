@@ -9,6 +9,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #AED6F1;
+    overflow-y: hidden;
 }
 a{
     text-decoration: none;
@@ -114,14 +115,6 @@ header .header_logo > h1{
     flex-direction: column;
     background-color: #F6F6F6;
     border-radius: 2vw;
-}
-.contenido > h1{
-    width: 20vw;
-    height: 8vh;
-    color: black;
-    font-size: 2vw;
-    padding-top: 1vw;
-    padding-left: 1vw;
 }
 .contenido > div{
     margin: 0 auto;
