@@ -93,7 +93,7 @@ class MyItem extends HTMLElement {
     // Define un setter para los datos del JSON
     set datos(value) {
         this.shadowRoot.querySelector('.imagen').style.backgroundImage = `url(${value.imagen})`;
-        this.shadowRoot.querySelector('.item_contenido h1').textContent = value.nombre;
+        this.shadowRoot.querySelector('.item_contenido h1').textContent = `${value.nombre}`;
         this.shadowRoot.querySelector('.item_contenido div h1').textContent = `$ ${value.precio}`;
     }
 
@@ -109,6 +109,7 @@ class MyItem extends HTMLElement {
         this.datos = data;
         } catch (error) {
         console.error('Fetch error: ', error);
+        
         }
     }
 
