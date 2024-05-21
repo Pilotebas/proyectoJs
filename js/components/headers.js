@@ -3,11 +3,34 @@ class Header extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.innerHTML = /*html*/ `
-      <link rel="stylesheet" href="../css/header.css">
       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
       <div id="content"></div>
-    `;
-  }
+      <style>
+        a{
+          text-decoration: none;
+          height: 25%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 1vw;
+          cursor: pointer;
+          border-radius: 1vw;
+          color: black;
+        }
+        a:hover{
+          background-color: #F6F6F6;
+          scale: 1.05;
+        }
+        a i{
+          font-size: 1.7vw;
+          margin-left: 1vw;
+        }
+        a  h1{
+          font-size: 1.5vw;
+        }
+      </style>
+              `;
+            }
 
   /**
    * Cuando el Dom este listo

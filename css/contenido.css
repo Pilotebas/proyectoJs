@@ -1,0 +1,64 @@
+#content
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 17.5vw;
+    height: 39vh;
+    border-radius: 1vw;
+    border: 1px solid black;
+}
+section .imagen{
+    width: 100%;
+    height: 80%;
+    border-radius: 1vw;
+    cursor: pointer;
+}
+section .item_contenido > h1{
+    padding: 0;
+    width: 7vw;
+    height: 50%;
+    font-size: 1vw;
+    color: white;
+    padding-left: 1vw;
+    padding-top: 0.5vw;
+}
+section .item_contenido > h1{
+    padding: 0;
+    width: 7vw;
+    height: 50%;
+    font-size: 1vw;
+    color: white;
+    padding-left: 1vw;
+    padding-top: 0.5vw;
+}
+section .item_contenido > div{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start ;
+}
+section .item_contenido > div > h1{
+    margin-left: 1vw;
+    color: white;
+    padding: 0;
+    width: 50%;
+    height: 100%;
+    font-size: 1vw;
+}
+section .item_contenido > div > button{
+    width: 35%;
+    height: 3.5vh;
+    font-size: 1vw;
+    border-radius: 1vw;
+    background-color: F6F6F6;
+    cursor: pointer;
+    border: none;
+    background-color: #F6F6F6;
+}
+div section .item_contenido > div > button:hover{
+    scale: 1.1;
+    background-color: #C5E0F6;
+}

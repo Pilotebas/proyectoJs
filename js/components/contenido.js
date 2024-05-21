@@ -1,73 +1,124 @@
-class MyContenido extends HTMLElement {
+class MyItem extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        // Inicializa el shadow DOM con los enlaces de estilos y un contenedor para el contenido
+        // Establece los estilos del componente
         this.shadowRoot.innerHTML = /*html*/ `
-        <link rel="stylesheet" href="../css/style.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <div id="content"></div> <!-- Contenedor inicial -->
-    `;
+        <style>
+            /* Estilos para el componente */
+            .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 17.5vw;
+            height: 39vh;
+            border-radius: 1vw;
+            border: 1px solid black;
+            overflow: hidden;
+            }
+
+            .imagen {
+            width: 100%;
+            height: 80%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 1vw;
+            cursor: pointer;
+            transition: background-image 0.6s;
+            }
+
+            .item_contenido {
+            width: 100%;
+            height: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-color: #333333;
+            border-radius: 0 0 1vw 1vw;
+            }
+
+            .item_contenido > h1 {
+            font-size: 1vw;
+            margin: 0;
+            }
+
+            .item_contenido > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 0.5vh;
+            }
+
+            .item_contenido > div > h1 {
+            margin-left: 1vw;
+            color: white;
+            padding: 0;
+            width: 50%;
+            height: 100%;
+            font-size: 1vw;
+            }
+
+            .item_contenido > div > button {
+            width: 35%;
+            height: 3.5vh;
+            font-size: 1vw;
+            border-radius: 1vw;
+            background-color: #F6F6F6;
+            cursor: pointer;
+            border: none;
+            }
+
+            .item_contenido > div > button:hover {
+            scale: 1.1;
+            background-color: #C5E0F6;
+            }
+        </style>
+        <section class="item">
+            <div class="imagen"></div>
+            <div class="item_contenido">
+            <h1></h1>
+            <div>
+                <h1></h1>
+                <button>Agregar</button>
+            </div>
+            </div>
+        </section>
+        `;
     }
 
-    /**
-     * Cuando el DOM esté listo
-     */
-    connectedCallback() {
-        this.fetchData();
+    // Define un setter para los datos del JSON
+    set datos(value) {
+        this.shadowRoot.querySelector('.imagen').style.backgroundImage = `url(${value.imagen})`;
+        this.shadowRoot.querySelector('.item_contenido h1').textContent = value.nombre;
+        this.shadowRoot.querySelector('.item_contenido div h1').textContent = `$ ${value.precio}`;
     }
 
-    /**
-     * Función para obtener datos desde una URL JSON
-     */
-    async fetchData() {
+    // Método para cargar los datos del JSON mediante fetch
+    async cargarDatos(url) {
         try {
-            const response = await fetch('bd/bd.json'); // Ajuste de la ruta al archivo JSON
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            const data = await response.json();
-            this.updateContent(data);
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        // Asignar los datos al componente
+        this.datos = data;
         } catch (error) {
-            console.error('Fetch error: ', error);
+        console.error('Fetch error: ', error);
         }
     }
 
-    /**
-     * Función para actualizar el contenido del componente con datos del JSON
-     */
-    updateContent(data) {
-        // Selecciona el div de contenido
-        const content = this.shadowRoot.querySelector('#content');
-
-        // Genera el contenido HTML basado en los datos del JSON
-        let htmlContent = '';
-
-        // Recorre cada categoría de productos
-        for (const category in data) {
-            if (data.hasOwnProperty(category)) {
-                htmlContent += `<h2>${category.charAt(0).toUpperCase() + category.slice(1)}</h2>`;
-                data[category].forEach(item => {
-                    htmlContent += /*html*/`
-                <div class="imagen">
-                    <img src="${item.imagen}" alt="${item.nombre}">
-                </div>
-                <div class="item_contenido">
-                    <h1>${item.nombre}</h1>
-                    <div class="precio">
-                        <h1>$${item.precio}</h1>
-                        <button>Agregar</button>
-                    </div>
-                </div>
-            `;
-                });
-            }
-        }
-
-        // Actualiza el contenido del div
-        content.innerHTML = htmlContent;
+    // Método que se ejecuta cuando el componente se conecta al DOM
+    connectedCallback() {
+        // URL del JSON
+        const url = '../bd/bd.json';
+        // Cargar los datos del JSON
+        this.cargarDatos(url);
     }
-}
+    }
 
-// Register the MyHeader component using the tag name <my-header>
-customElements.define('my-contenido', MyContenido);
+    customElements.define('my-contenido', MyItem);
