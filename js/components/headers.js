@@ -3,7 +3,7 @@ class Header extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.innerHTML = /*html*/ `
-      <link rel="stylesheet" href="../css/contenido.css">
+      <link rel="stylesheet" href="../css/header.css">
       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
       <div id="content"></div>
     `;
