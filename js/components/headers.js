@@ -3,7 +3,9 @@ class Header extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.innerHTML = /*html*/ `
-    <link rel="stylesheet" href="../css/style.css">
+      <link rel="stylesheet" href="../css/contenido.css">
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <div id="content"></div>
     `;
   }
 
@@ -26,34 +28,31 @@ class Header extends HTMLElement {
     return ["titulo", "icon"];
   }
 
-  /**Funcion que crea el html para agregarlo al DOM */
+  /** Función que crea el html para agregarlo al DOM */
   render() {
     const miTitle = this.getAttribute("titulo");
     const miIcon = this.getAttribute("icon");
 
     console.log("miIcon ", miIcon);
 
-    // Limpiar el shadowRoot antes de actualizar
-    this.shadowRoot.innerHTML = "";
+    // Selecciona el div de contenido en lugar de limpiar todo el shadowRoot
+    const content = this.shadowRoot.querySelector('#content');
 
-    // Actualizar el contenido del shadowRoot basado en el atributo
-    const contenido = document.createElement("a");
-    contenido.setAttribute("href", "#");
-
-    contenido.innerHTML = `<i class='${miIcon}'></i>
-    <h1>${miTitle}</h1>`;
-
-    // contenido.textContent = `${miAtributo}`;
-    this.shadowRoot.appendChild(contenido);
+    // Actualiza el contenido del div
+    content.innerHTML = `<a href="#">
+      <i class='${miIcon}'></i>
+      <h1>${miTitle}</h1>
+    </a>`;
   }
 }
 
-ppp.addEventListener("click", () => {
-    let obj = document.getElementById("carro");
+/*ppp.addEventListener("click", () => {
+  let obj = document.getElementById("carro");
   let newValue = parseInt(obj.textContent) + 1;
   obj.textContent = newValue;
   alert(newValue);
 });
+*/
 
-// Register the CurrentDate component using the tag name <current-date>.
+// Register the Header component using the tag name <my-header>.
 customElements.define("my-header", Header);
