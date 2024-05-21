@@ -1,6 +1,7 @@
 export const getAllabrigos = async() =>{
     let rest = await fetch ('http://localhost:5501/abrigo')
     let data = await rest.json();
+    console.log("hola", data)
     return data;
 }
 
