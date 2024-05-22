@@ -4,11 +4,10 @@ export async function getProducts() {
         const data = await response.json();
         return data.map(item => ({
             id: item.id,
-            title: item.titulo,
-            image: item.imagen,
-            image2: item.imagen2,
-            category: item.categoria.id,
-            price: item.precio
+            titulo: item.titulo,
+            imagen: item.imagen,
+            categoria: item.categoria.id,
+            precio: item.precio
         }));
     } catch (error) {
         console.error('Error loading products:', error);

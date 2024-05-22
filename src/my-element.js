@@ -77,12 +77,34 @@ connectedCallback() {
     this.view = 'cart';
     this.menuOpen = false;
     this.requestUpdate();
-}
-  _onClick() {
-    this.count++
   }
-
-  static get styles() {
+  changeCategory(category) {
+    this.activeCategory = category;
+    this.view = 'products';
+    this.menuOpen = false;
+    this.requestUpdate();
+  }
+  renderProducts(){
+    const filteredProducts = this.products.filter(product => this.activeCategory === 'all' || product.category === this.activeCategory);
+    return html `
+    <h2 class="tittle" ${this.activeCategory === 'all' ? 'Todos los productos' : this.activeCategory.charAt(0).toUpperCase() + this.activeCategory.slice(1)}></h2>
+    <section class="item"> 
+    ${filteredProducts.map(product => html `
+      <div class"producto">
+      
+        <img class="imagen" src=${product.imagen}>
+        <div class="item_contenido">
+            <h1>${product.titulo}</h1>
+            <div>
+                <h1>${product.precio}</h1>
+                <button>Agregar</button>
+            </div>
+        </div>
+      </div>`)}
+    </section>  
+    `
+  }
+static get styles() {
     return css`
       
     `
