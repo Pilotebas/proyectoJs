@@ -5,90 +5,90 @@ class MyCardConten extends HTMLElement {
         super();
         this.attachShadow({ mode: "open" });
         this.shadowRoot.innerHTML = `
-            <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-            <style>
-                .item_contenido{
-                    display: flex;  
-                    gap: 3vw;
-                }
-                .item_contenido .name{
-                    width: 10vw;
-                    height: 15vh;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    gap: 1vw;
-                }
-                .item_contenido .cantidad{
-                    width: 10vw;
-                    height: 15vh;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    gap: 1vw;
-                }
-                .item_contenido .precio{
-                    width: 10vw;
-                    height: 15vh;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    gap: 1vw;
-                }
-                .item_contenido .subtotal{
-                    width: 10vw;
-                    height: 15vh;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    gap: 1vw;
-                }
-                .item_contenido .eliminar a{
-                    width: 5vw;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    height: 15vh;
-                    align-self: center;
-                    font-size: 2.5vw;
-                    color: red  ;
-                    cursor: pointer;
-                }
-                .imagen {
-                    width: 100%;
-                    height: 100%;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-position: center;
-                    border-radius: 1vw;
-                    cursor: pointer;
-                }
-            </style>
-            <section class="item">
-                <div class="imagen"><img src="" alt=""></div>
-                <div class="item_contenido">
-                    <div class="name">
-                        <h1>Nombre</h1>
-                        <h2></h2>
-                    </div>
-                    <div class="cantidad">
-                        <h1>Cantidad</h1>
-                        <h1></h1>
-                    </div>
-                    <div class="precio">
-                        <h1>Precio</h1>
-                        <h1></h1>
-                    </div>
-                    <div class="subtotal">
-                        <h2>Subtotal</h2>
-                        <h2>$</h2>
-                    </div>
-                    <div class="eliminar">
-                        <i class='bx bx-trash' data-id=""></i>
-                    </div>
-                </div>
-            </section>
-        `;
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <style>
+        .item_contenido {
+          display: flex;
+          gap: 3vw;
+        }
+        .item_contenido .name {
+          width: 10vw;
+          height: 15vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1vw;
+        }
+        .item_contenido .cantidad {
+          width: 10vw;
+          height: 15vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1vw;
+        }
+        .item_contenido .precio {
+          width: 10vw;
+          height: 15vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1vw;
+        }
+        .item_contenido .subtotal {
+          width: 10vw;
+          height: 15vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1vw;
+        }
+        .item_contenido .eliminar a {
+          width: 5vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 15vh;
+          align-self: center;
+          font-size: 2.5vw;
+          color: red;
+          cursor: pointer;
+        }
+        .imagen {
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          border-radius: 1vw;
+          cursor: pointer;
+        }
+      </style>
+      <section class="item">
+        <div class="imagen"></div>
+        <div class="item_contenido">
+          <div class="name">
+            <h1>Nombre</h1>
+            <h2></h2>
+          </div>
+          <div class="cantidad">
+            <h1>Cantidad</h1>
+            <h1></h1>
+          </div>
+          <div class="precio">
+            <h1>Precio</h1>
+            <h1></h1>
+          </div>
+          <div class="subtotal">
+            <h2>Subtotal</h2>
+            <h2>$</h2>
+          </div>
+          <div class="eliminar">
+            <i class='bx bx-trash' data-id=""></i>
+          </div>
+        </div>
+      </section>
+    `;
     }
 
     connectedCallback() {
@@ -98,9 +98,9 @@ class MyCardConten extends HTMLElement {
         const id = this.getAttribute("id");
 
         this.shadowRoot.querySelector(".name h2").textContent = nombre;
-        this.shadowRoot.querySelector(".imagen img").src = imagen;
+        this.shadowRoot.querySelector(".imagen").style.backgroundImage = `url(${imagen})`;
         this.shadowRoot.querySelector(".precio h1:nth-of-type(2)").textContent = `$${precio}`;
-        this.shadowRoot.querySelector(".cantidad h1:nth-of-type(2)").textContent = id;
+        this.shadowRoot.querySelector(".cantidad h1:nth-of-type(2)").textContent = `${id}`;
         this.shadowRoot.querySelector(".eliminar i").setAttribute("data-id", id);
 
         this.shadowRoot.querySelector(".eliminar i").addEventListener("click", () => {
@@ -150,5 +150,4 @@ document.addEventListener("DOMContentLoaded", async () => {
         let jsonOpcion4 = await getAll();
         agregarComponentesCarrito(jsonOpcion4);
     });
-
 });
