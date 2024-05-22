@@ -102,7 +102,48 @@ connectedCallback() {
     </section>  
     `
   }
-static get styles() {
+  renderCart(){
+    const total = this.cartItems.reduce((acc, item) => acc + item.subtotal, 0);
+
+    return html `
+    <h1 class="titulo" ${this.cartItems.length > 0 ? html` >Carrito de compras</h1>
+    <div>
+    ${this.cartItems.map(item => html` 
+        <section class="item">
+            <img src=${item.imagen} alt="">
+            <div class="item_contenido">
+                <div class="name">
+                    <h1>Nombre</h1>
+                    <h2>${item.nombre}</h2>
+                </div>
+                <div class="cantidad">
+                    <h1>Cantidad</h1>
+                    <h1>${item.cantidad}</h1>
+                </div>
+                <div class="precio">
+                    <h1>Precio</h1>
+                    <h1>${item.precio}</h1>
+                </div>
+                <div class="subtotal">
+                    <h2>Subtotal</h2>
+                    <h2>$${item.subtotal}</h2>
+                </div>
+                <div class="eliminar"  @click=${()=> this.removeFromCart(item.id)}>
+                    <i class='bx bx-trash'></i>
+                </div>
+            </div>
+        </section>
+        <div class="botones">
+            <button  @click=${()=> this.emptyCart}>Vaciar Carrito</button>
+            <div>
+                <h1>Total <br>$ 4.000</h1>
+                <button>Comprar Ahora</button>
+            </div>
+        </div>
+    </div>
+    `
+  }
+  static get styles() {
     return css`
       
     `
@@ -120,7 +161,26 @@ static get styles() {
             ];
         }
         this.requestUpdate();
+  }
+  removeFromCart(productId) {
+    const itemIndex = this.cartItems.findIndex(item => item.id === productId);
+    if (itemIndex > -1) {
+        if (this.cartItems[itemIndex].quantity > 1) {
+            this.cartItems[itemIndex].quantity -= 1;
+            this.cartItems[itemIndex].subtotal = this.cartItems[itemIndex].quantity * this.cartItems[itemIndex].price;
+        } else {
+            this.cartItems = this.cartItems.filter(item => item.id !== productId);
+        }
     }
+    this.requestUpdate();
+    this.removed();
+  }
+
+  emptyCart() {
+    this.cartItems = [];
+    this.requestUpdate();
+    this.vaciarCarrito();
+  }
 }
 
 window.customElements.define('my-element', MyElement)
