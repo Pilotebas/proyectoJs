@@ -7,11 +7,11 @@ class MyCardConten extends HTMLElement {
         this.shadowRoot.innerHTML = `
             <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
             <style>
-                .item{
+                .item_contenido{
                     display: flex;  
                     gap: 3vw;
                 }
-                .item .name{
+                .item_contenido .name{
                     width: 10vw;
                     height: 15vh;
                     display: flex;
@@ -19,7 +19,7 @@ class MyCardConten extends HTMLElement {
                     justify-content: center;
                     gap: 1vw;
                 }
-                .item .cantidad{
+                .item_contenido .cantidad{
                     width: 10vw;
                     height: 15vh;
                     display: flex;
@@ -27,7 +27,7 @@ class MyCardConten extends HTMLElement {
                     justify-content: center;
                     gap: 1vw;
                 }
-                .item .precio{
+                .item_contenido .precio{
                     width: 10vw;
                     height: 15vh;
                     display: flex;
@@ -35,7 +35,7 @@ class MyCardConten extends HTMLElement {
                     justify-content: center;
                     gap: 1vw;
                 }
-                .item .subtotal{
+                .item_contenido .subtotal{
                     width: 10vw;
                     height: 15vh;
                     display: flex;
@@ -43,7 +43,7 @@ class MyCardConten extends HTMLElement {
                     justify-content: center;
                     gap: 1vw;
                 }
-                .item .eliminar a{
+                .item_contenido .eliminar a{
                     width: 5vw;
                     display: flex;
                     flex-direction: column;
@@ -52,6 +52,15 @@ class MyCardConten extends HTMLElement {
                     align-self: center;
                     font-size: 2.5vw;
                     color: red  ;
+                    cursor: pointer;
+                }
+                .imagen {
+                    width: 100%;
+                    height: 100%;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 1vw;
                     cursor: pointer;
                 }
             </style>
