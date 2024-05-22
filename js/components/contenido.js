@@ -1,10 +1,18 @@
-import { getAll, getAllpants, getAllsweet, getAllshirt } from "../modules/modules.js";
+import {
+  getAll,
+  getAllpants,
+  getAllsweet,
+  getAllshirt,
+  getAntbyId,
+} from "../modules/modules.js";
+
+import { CarritoComponent } from "../components/cart.js";
 
 class MyComponent extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-        this.shadowRoot.innerHTML = `
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.innerHTML = `
             <style>
                 /* Estilos para el componente */
                 .item {
@@ -89,64 +97,128 @@ class MyComponent extends HTMLElement {
                 </div>
             </section>
         `;
-    }
+  }
+// cuando el DOM esta listo
+  connectedCallback() {
+    const nombre = this.getAttribute("nombre");
+    const imagen = this.getAttribute("imagen");
+    const precio = this.getAttribute("precio");
+    const id = this.getAttribute("id");
 
-    connectedCallback() {
-        const nombre = this.getAttribute('nombre');
-        const imagen = this.getAttribute('imagen');
-        const precio = this.getAttribute('precio');
+    // Configuración de los elementos del componente
+    this.shadowRoot.querySelector("h1").textContent = nombre;
+    this.shadowRoot.querySelector("button").setAttribute("id", id);
 
-        // Configuración de los elementos del componente
-        this.shadowRoot.querySelector('h1').textContent = nombre;
-        this.shadowRoot.querySelector('.imagen').style.backgroundImage = `url('${imagen}')`;
-        this.shadowRoot.querySelector('.item_contenido > p').textContent = `Precio: $${precio}`;
-    }
+    this.shadowRoot
+      .querySelector("button")
+      .addEventListener("click", function () {
+        let ids = localStorage.getItem("idProduct");
+
+        ids = ids ? ids + ", " + this.id : this.id;
+
+        localStorage.setItem("idProduct", ids);
+
+        const string = localStorage.getItem("idProduct");
+        const valores = string.split(", ");
+        const contador = {};
+
+        let total = 0;
+
+        valores.forEach((valor) => {
+          contador[valor] = (contador[valor] || 0) + 1;
+          total++
+        });
+        let carrito = document.getElementById("carritoContainer");
+        carrito.innerHTML = "";
+
+        const myComponent = document.createElement("carrito-component");
+        
+
+        console.log(contador);
+
+        myComponent.shadowRoot.querySelector("h2").textContent = total;
+
+        carrito.appendChild(myComponent);
+      });
+
+    this.shadowRoot.querySelector(
+      ".imagen"
+    ).style.backgroundImage = `url('${imagen}')`;
+    this.shadowRoot.querySelector(
+      ".item_contenido > div > h1"
+    ).textContent = `$${precio}`;
+  }
 }
 
-customElements.define('my-component', MyComponent);
+customElements.define("my-component", MyComponent);
 
-document.addEventListener('DOMContentLoaded', async () => {
-    let container = document.getElementById('contenido');
+document.addEventListener("DOMContentLoaded", async () => {
+  let container = document.getElementById("contenido");
 
-    function agregarComponentes(json, titulo) {
-        container.innerHTML = '';
-        
-        // Agregar el título
-        let tituloElement = document.createElement('h1');
-        tituloElement.textContent = titulo;
-        container.appendChild(tituloElement);
+  function agregarComponentes(json, titulo) {
+    container.innerHTML = "";
 
-        // Agregar los componentes
-        json.forEach(item => {
-            const myComponent = document.createElement('my-component');
-            myComponent.setAttribute('nombre', item.nombre);
-            myComponent.setAttribute('imagen', item.imagen);
-            myComponent.setAttribute('precio', item.precio);
-            container.appendChild(myComponent);
-        });
-    }
+    // Agregar el título
+    let tituloElement = document.createElement("h1");
+    tituloElement.textContent = titulo;
+    container.appendChild(tituloElement);
 
-    document.getElementById('opcion1').addEventListener('click', async function() {
-        let jsonOpcion1 = await getAll();
-        agregarComponentes(jsonOpcion1, 'Todos los productos');
+    // Agregar los componentes
+    json.forEach((item) => {
+      const myComponent = document.createElement("my-component");
+
+      myComponent.setAttribute("nombre", item.nombre);
+      myComponent.setAttribute("imagen", item.imagen);
+      myComponent.setAttribute("precio", item.precio);
+      myComponent.setAttribute("id", item.id);
+
+      container.appendChild(myComponent);
+    });
+  }
+
+  document
+    .getElementById("opcion1")
+    .addEventListener("click", async function () {
+      let jsonOpcion1 = await getAll();
+      agregarComponentes(jsonOpcion1, "Todos los productos");
     });
 
-    document.getElementById('opcion2').addEventListener('click', async function() {
-        let jsonOpcion2 = await getAllsweet();
-        agregarComponentes(jsonOpcion2, 'Abrigos');
+  document
+    .getElementById("opcion2")
+    .addEventListener("click", async function () {
+      let jsonOpcion2 = await getAllsweet();
+      agregarComponentes(jsonOpcion2, "Abrigos");
     });
 
-    document.getElementById('opcion3').addEventListener('click', async function() {
-        let jsonOpcion3 = await getAllshirt();
-        agregarComponentes(jsonOpcion3, 'Camisas');
+  document
+    .getElementById("opcion3")
+    .addEventListener("click", async function () {
+      let jsonOpcion3 = await getAllshirt();
+      agregarComponentes(jsonOpcion3, "Camisas");
+    });
+  document
+    .getElementById("opcion4")
+    .addEventListener("click", async function () {
+      let jsonOpcion4 = await getAllpants();
+      agregarComponentes(jsonOpcion4, "Pantalones");
+    });
+  document
+    .getElementById("opcion4")
+    .addEventListener("click", async function () {
+      let jsonOpcion4 = await getAllpants();
+      agregarComponentes(jsonOpcion4, "Pantalones");
+    });
+  document
+    .getElementById("carritoContainer")
+    .addEventListener("click", async function () {
+      let jsonOpcion4 = await getAllpants();
+      agregarComponentes(jsonOpcion4, "Carrtito");
+
+
+
     });
 
-    document.getElementById('opcion4').addEventListener('click', async function() {
-        let jsonOpcion4 = await getAllpants();
-        agregarComponentes(jsonOpcion4, 'Pantalones');
-    });
-
-    // Inicializar con la opción 1
-    let jsonOpcion1 = await getAll();
-    agregarComponentes(jsonOpcion1, 'Todos los productos');
+  // Inicializar con la opción 1
+  let jsonOpcion1 = await getAll();
+  agregarComponentes(jsonOpcion1, "Todos los productos");
 });

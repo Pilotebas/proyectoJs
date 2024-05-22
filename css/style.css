@@ -77,28 +77,6 @@ header .header_carrito:hover{
     border-radius: 1vw;
     scale: 1.05;
 }
-header .header_carrito i{
-    font-size: 2vw;
-    color: black;
-    margin-left: 1vw;
-}
-header .header_carrito > h1{
-    font-size: 1.5vw;
-    padding-left: 1vw;
-    padding-right: 2vw;
-    color: black
-}
-header .header_carrito > h2{
-    display: flex;
-    width: 15%;
-    height: 50%;
-    background-color: white;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.5vw;
-    color: black;
-    font-size: 1.3vw;
-}
 header .header_logo{
     width: 18vw;
     height: 10vh;

@@ -20,19 +20,17 @@
                 <my-header titulo="Pantalones" icon="bx bxs-arch" id="opcion4"></my-header>
             </ul>
         </div>
-        <a href="views/carrito.html" class="header_carrito">
-            <i class='bx bxs-cart' ></i>
-            <h1>Carrito</h1>
-            <h2>3</h2>
-        </a>
+        <div class="header_carrito" id="carritoContainer">
+            <carrito-component></carrito-component>
+        </div>
         <div class="header_logo">
             <h1>Fear of Good <br>  x   <br> Pilotebas</h1>
         </div>
     </header>
     <section class="contenido" id="contenido">
-        <h1>Todos los productos</h1>
     </section>
 </body>
 <script type="module" src="js/components/contenido.js"></script>
 <script type="module" src="js/components/headers.js"></script>
+<script type="module" src="js/components/cart.js"></script>
 </html>

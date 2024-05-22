@@ -30,7 +30,7 @@ class Header extends HTMLElement {
         }
       </style>
               `;
-            }
+  }
 
   /**
    * Cuando el Dom este listo
@@ -41,13 +41,11 @@ class Header extends HTMLElement {
 
   /** Funcion que se ejecuta o actualiza cada vez que un atributo cambia */
   attributeChangedCallback(name, old, now) {
-    console.log("attributeChangedCallback ", name, old, now);
     this.render();
   }
 
   /** Función que esta escuchando las propiedades del componente */
   static get observedAttributes() {
-    console.log("observedAttributes");
     return ["titulo", "icon"];
   }
 
@@ -56,10 +54,8 @@ class Header extends HTMLElement {
     const miTitle = this.getAttribute("titulo");
     const miIcon = this.getAttribute("icon");
 
-    console.log("miIcon ", miIcon);
-
     // Selecciona el div de contenido en lugar de limpiar todo el shadowRoot
-    const content = this.shadowRoot.querySelector('#content');
+    const content = this.shadowRoot.querySelector("#content");
 
     // Actualiza el contenido del div
     content.innerHTML = `<a href="#">
