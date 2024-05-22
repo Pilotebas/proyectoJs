@@ -7,9 +7,27 @@ class MyCardConten extends HTMLElement {
         this.shadowRoot.innerHTML = `
       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
       <style>
+        .item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          width: 70vw;
+          height: 20%;
+          border-radius: 1vw;
+          border: 1px solid black;
+        }
         .item_contenido {
           display: flex;
           gap: 3vw;
+        }
+        .imagen {
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          border-radius: 1vw;
+          cursor: pointer;
         }
         .item_contenido .name {
           width: 10vw;
@@ -43,7 +61,7 @@ class MyCardConten extends HTMLElement {
           justify-content: center;
           gap: 1vw;
         }
-        .item_contenido .eliminar a {
+        .eliminar {
           width: 5vw;
           display: flex;
           flex-direction: column;
@@ -53,16 +71,15 @@ class MyCardConten extends HTMLElement {
           font-size: 2.5vw;
           color: red;
           cursor: pointer;
-        }
-        .imagen {
-          width: 100%;
-          height: 100%;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-          border-radius: 1vw;
+      }
+        i{
+          width: 5vw;
+          display: flex;
+          font-size: 2.5vw;
+          color: red;
           cursor: pointer;
         }
+        
       </style>
       <section class="item">
         <div class="imagen"></div>
