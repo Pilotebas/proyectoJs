@@ -87,34 +87,20 @@ header .header_logo > h1{
     padding-bottom: 1vw;
 }
 .contenido{
-    width: 75vw;
-    height: 90vh;
     display: flex;
-    flex-direction: column;
     background-color: #F6F6F6;
     border-radius: 2vw;
     overflow-y: scroll;
-    margin: 0 auto;
+    margin: auto;
     width: 75vw;
     height: 80vh;
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1vw;
     overflow-y: scroll;
 }
-.contenido > div{
-    margin: 0 auto;
-    width: 75vw;
-    height: 80vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1vw;
-    overflow-y: scroll;
-}
+
 .contenido > div > section{
     display: flex;
     flex-direction: column;

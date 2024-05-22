@@ -12,7 +12,7 @@ class MyCardConten extends HTMLElement {
           flex-direction: row;
           align-items: center;
           width: 70vw;
-          height: 20%;
+          height: 10vw;
           border-radius: 1vw;
           border: 1px solid black;
         }
@@ -113,13 +113,18 @@ class MyCardConten extends HTMLElement {
         const imagen = this.getAttribute("imagen");
         const precio = this.getAttribute("precio");
         const id = this.getAttribute("id");
-
+        
         this.shadowRoot.querySelector(".name h2").textContent = nombre;
         this.shadowRoot.querySelector(".imagen").style.backgroundImage = `url(${imagen})`;
         this.shadowRoot.querySelector(".precio h1:nth-of-type(2)").textContent = `$${precio}`;
         this.shadowRoot.querySelector(".cantidad h1:nth-of-type(2)").textContent = quantity(id)
-        this.shadowRoot.querySelector(".eliminar i").setAttribute("data-id", id);
-        this.shadowRoot.querySelector(".subtotal h2").textContent = obtenerPrecioMultiplicado(id, precio)
+        this.shadowRoot.querySelector(".eliminar i").addEventListener("click", () => {
+          this.removeItemFromList(id);
+          this.remove();
+          // Llama a la función para volver a renderizar los componentes del carrito
+          document.getElementById("carritoContainer").click();
+        });
+        this.shadowRoot.querySelector(".subtotal h2:nth-of-type(2)").textContent = obtenerPrecioMultiplicado(id, precio)
 
         this.shadowRoot.querySelector(".eliminar i").addEventListener("click", () => {
             this.removeItemFromList(id);
@@ -130,15 +135,13 @@ class MyCardConten extends HTMLElement {
     }
 
     removeItemFromList(id) {
-        let ids = localStorage.getItem("idProduct");
-        ids = ids ? ids.split(", ") : [];
-        const index = ids.indexOf(id);
-        if (index > -1) {
-            ids.splice(index, 1);
-            localStorage.setItem("idProduct", ids.join(", "));
-            console.log(`Item with ID ${id} removed. Updated valuesList:`, ids);
-        }
-    }
+      let ids = localStorage.getItem("idProduct");
+      ids = ids ? ids.split(", ") : [];
+      // Elimina todas las instancias del ID específico de la lista
+      ids = ids.filter((item) => item !== id);
+      localStorage.setItem("idProduct", ids.join(", "));
+      console.log(`Se eliminaron todas las instancias del ID ${id}. Lista actualizada:`, ids);
+  }
 }
 customElements.define("carrito-contenido", MyCardConten);
 
