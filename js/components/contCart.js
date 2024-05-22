@@ -5,6 +5,56 @@ class MyCardConten extends HTMLElement {
         super();
         this.attachShadow({ mode: "open" });
         this.shadowRoot.innerHTML = `
+            <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+            <style>
+                .item{
+                    display: flex;  
+                    gap: 3vw;
+                }
+                .item .name{
+                    width: 10vw;
+                    height: 15vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 1vw;
+                }
+                .item .cantidad{
+                    width: 10vw;
+                    height: 15vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 1vw;
+                }
+                .item .precio{
+                    width: 10vw;
+                    height: 15vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 1vw;
+                }
+                .item .subtotal{
+                    width: 10vw;
+                    height: 15vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 1vw;
+                }
+                .item .eliminar a{
+                    width: 5vw;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 15vh;
+                    align-self: center;
+                    font-size: 2.5vw;
+                    color: red  ;
+                    cursor: pointer;
+                }
+            </style>
             <section class="item">
                 <div class="imagen"><img src="" alt=""></div>
                 <div class="item_contenido">
@@ -92,7 +142,4 @@ document.addEventListener("DOMContentLoaded", async () => {
         agregarComponentesCarrito(jsonOpcion4);
     });
 
-    // Cargar componentes del carrito al cargar la página
-    let jsonOpcion4 = await getAll();
-    agregarComponentesCarrito(jsonOpcion4);
 });

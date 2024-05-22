@@ -16,14 +16,14 @@ class MyComponent extends HTMLElement {
             <style>
                 /* Estilos para el componente */
                 .item {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    width: 17.5vw;
-                    height: 39vh;
-                    border-radius: 1vw;
-                    border: 1px solid black;
-                    overflow: hidden;
+                  margin-top: 20px
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  width: 17.5vw;
+                  height: 39vh;
+                  border-radius: 1vw;
+                  border: 1px solid black;
                 }
 
                 .imagen {
@@ -50,40 +50,41 @@ class MyComponent extends HTMLElement {
                 }
 
                 .item_contenido > h1 {
-                    font-size: 1vw;
-                    margin: 0;
+                  padding: 0;
+                  width: 7vw;
+                  height: 40%;
+                  font-size: 1vw;
+                  color: white;
+                  padding-left: 1vw;
                 }
 
                 .item_contenido > div {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-around;
-                    width: 100%;
-                    margin-top: 0.5vh;
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: start;
+                  justify-content: start ;
                 }
 
                 .item_contenido > div > h1 {
-                    margin-left: 1vw;
-                    color: white;
-                    padding: 0;
-                    width: 50%;
-                    height: 100%;
-                    font-size: 1vw;
+                  margin-left: 1vw;
+                  color: white;
+                  padding: 0;
+                  width: 50%;
+                  height: 100%;
+                  font-size: 1vw;
                 }
 
                 .item_contenido > div > button {
-                    width: 35%;
-                    height: 3.5vh;
-                    font-size: 1vw;
-                    border-radius: 1vw;
-                    background-color: #F6F6F6;
-                    cursor: pointer;
-                    border: none;
-                }
-
-                .item_contenido > div > button:hover {
-                    scale: 1.1;
-                    background-color: #C5E0F6;
+                  width: 35%;
+                  height: 3vh;
+                  font-size: 1vw;
+                  border-radius: 1vw;
+                  background-color: F6F6F6;
+                  cursor: pointer;
+                  border: none;
+                  background-color: #F6F6F6;
                 }
             </style>
             <section class="item">
@@ -98,7 +99,7 @@ class MyComponent extends HTMLElement {
             </section>
         `;
   }
-// cuando el DOM esta listo
+  // cuando el DOM esta listo
   connectedCallback() {
     const nombre = this.getAttribute("nombre");
     const imagen = this.getAttribute("imagen");
@@ -132,7 +133,7 @@ class MyComponent extends HTMLElement {
         carrito.innerHTML = "";
 
         const myComponent = document.createElement("carrito-component");
-        
+
 
         console.log(contador);
 
@@ -156,12 +157,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   let container = document.getElementById("contenido");
 
   function agregarComponentes(json, titulo) {
-    container.innerHTML = "";
+    contenido.innerHTML = "";
 
-    // Agregar el título
-    let tituloElement = document.createElement("h1");
-    tituloElement.textContent = titulo;
-    container.appendChild(tituloElement);
 
     // Agregar los componentes
     json.forEach((item) => {
