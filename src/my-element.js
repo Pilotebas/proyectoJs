@@ -1,7 +1,5 @@
 import { LitElement, css, html } from 'lit'
-import litLogo from './assets/lit.svg'
-import viteLogo from '/vite.svg'
-
+import { getProducts } from './js/getProducts';
 /**
  * An example element.
  *
@@ -97,7 +95,7 @@ connectedCallback() {
             <h1>${product.titulo}</h1>
             <div>
                 <h1>${product.precio}</h1>
-                <button>Agregar</button>
+                <button class="agregar" @click=${()=> this.addTocart(product)}>Agregar</button>
             </div>
         </div>
       </div>`)}
@@ -109,6 +107,20 @@ static get styles() {
       
     `
   }
+  addToCart(product) {
+        added();
+        const cartItem = this.cartItems.find(item => item.id === product.id);
+        if (cartItem) {
+            cartItem.quantity += 1;
+            cartItem.subtotal = cartItem.quantity * cartItem.price;
+        } else {
+            this.cartItems = [
+                ...this.cartItems,
+                { ...product, quantity: 1, subtotal: product.price }
+            ];
+        }
+        this.requestUpdate();
+    }
 }
 
 window.customElements.define('my-element', MyElement)
