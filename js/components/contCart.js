@@ -100,8 +100,9 @@ class MyCardConten extends HTMLElement {
         this.shadowRoot.querySelector(".name h2").textContent = nombre;
         this.shadowRoot.querySelector(".imagen").style.backgroundImage = `url(${imagen})`;
         this.shadowRoot.querySelector(".precio h1:nth-of-type(2)").textContent = `$${precio}`;
-        this.shadowRoot.querySelector(".cantidad h1:nth-of-type(2)").textContent = `${id}`;
+        this.shadowRoot.querySelector(".cantidad h1:nth-of-type(2)").textContent = quantity(id)
         this.shadowRoot.querySelector(".eliminar i").setAttribute("data-id", id);
+        this.shadowRoot.querySelector(".subtotal h2").textContent = obtenerPrecioMultiplicado(id, precio)
 
         this.shadowRoot.querySelector(".eliminar i").addEventListener("click", () => {
             this.removeItemFromList(id);
@@ -122,15 +123,34 @@ class MyCardConten extends HTMLElement {
         }
     }
 }
-
 customElements.define("carrito-contenido", MyCardConten);
 
+var string = localStorage.getItem("idProduct");
+var valores = string ? string.split(", ") : [];
+function quantity(id){
+    let total = 0;
+    valores.forEach((valor) => {
+        if (valor == id) {
+            total++;
+        }
+    });
+    console.log(total);
+    return total;
+}
+function obtenerPrecioMultiplicado(id, precio){
+    let total = 0;
+    valores.forEach((valor) => {
+        if (valor == id) {
+            total++;
+        }
+    });
+    console.log(total);
+    return total * precio;
+}
 document.addEventListener("DOMContentLoaded", async () => {
     let container = document.getElementById("contenido");
 
-    const string = localStorage.getItem("idProduct");
-    const valores = string ? string.split(", ") : [];
-
+    
     function agregarComponentesCarrito(json) {
         container.innerHTML = "";
         json.forEach((item) => {
