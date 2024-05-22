@@ -60,19 +60,24 @@ connectedCallback() {
                 </div>
             </ul>
         </div>
-        <div class="header_carrito">
+        <button class="header_carrito" ${this.view === 'cart' ? 'active' : ''}" @click=${this.viewCart} >
             <i class='bx bxs-cart' ></i>
             <h1>Carrito</h1>
             <h2>3</h2>
-        </div>
+        </button >
         <div class="header_logo">
             <h1>Fear of Good <br>  x   <br> Pilotebas</h1>
         </div>
       </header>
-      <main></main>
+      <main>${this.view === 'products' ? this.renderProducts() : this.renderCart()}</main>
 </div>`
   }
-
+  viewCart() {
+    this.activeCategory = null;
+    this.view = 'cart';
+    this.menuOpen = false;
+    this.requestUpdate();
+}
   _onClick() {
     this.count++
   }
