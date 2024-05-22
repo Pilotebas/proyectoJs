@@ -176,6 +176,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  function agregarComponentesCarrito(json,) {
+    container.innerHTML = "";
+
+    // Agregar los componentes
+    json.forEach((item) => {
+      const myComponent = document.createElement("my-component");
+
+      myComponent.setAttribute("nombre", item.nombre);
+      myComponent.setAttribute("imagen", item.imagen);
+      myComponent.setAttribute("precio", item.precio);
+      myComponent.setAttribute("id", item.id);
+
+      container.appendChild(myComponent);
+    });
+  }
+
   document
     .getElementById("opcion1")
     .addEventListener("click", async function () {
@@ -208,16 +224,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       let jsonOpcion4 = await getAllpants();
       agregarComponentes(jsonOpcion4, "Pantalones");
     });
-  document
-    .getElementById("carritoContainer")
-    .addEventListener("click", async function () {
-      let jsonOpcion4 = await getAllpants();
-      agregarComponentes(jsonOpcion4, "Carrtito");
-
-
-
-    });
-
   // Inicializar con la opción 1
   let jsonOpcion1 = await getAll();
   agregarComponentes(jsonOpcion1, "Todos los productos");
