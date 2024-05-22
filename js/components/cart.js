@@ -52,7 +52,7 @@ export class CarritoComponent extends HTMLElement {
 
   connectedCallback() {
 
-    const string = localStorage.getItem("idProduct");
+    const string = localStorage.getItem("idProduct"); // STRING LOCAQL STORAGE
     const valores = string.split(", ");
     const contador = {};
 
