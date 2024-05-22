@@ -42,22 +42,22 @@ connectedCallback() {
         </div>
         <div class="header_contenido">
             <ul>
-                <div>
+                <button ${this.activeCategory === 'all' ? 'active' : ''}" @click=${() => this.changeCategory('all')} >
                     <i class='bx bx-border-all'></i>
                     <h1>Todos los productos</h1>
-                </div>
-                <a>
+                </button>
+                <button ${this.activeCategory === 'all' ? 'active' : ''}" @click=${() => this.changeCategory('abrigos')} >
                     <i class='bx bxs-face-mask'></i>
                     <h1>Abrigos</h1>
-                </div>
-                <div>
+                </button>
+                <button ${this.activeCategory === 'all' ? 'active' : ''}" @click=${() => this.changeCategory('camisas')} >
                     <i class='bx bxs-t-shirt'></i>
                     <h1>Camisas</h1>
-                </div>
-                <div>
+                </button>
+                <button ${this.activeCategory === 'all' ? 'active' : ''}" @click=${() => this.changeCategory('pantalon')} >
                     <i class='bx bxs-arch'></i>
                     <h1>Pantalones</h1>
-                </div>
+                </button>
             </ul>
         </div>
         <button class="header_carrito" ${this.view === 'cart' ? 'active' : ''}" @click=${this.viewCart} >
