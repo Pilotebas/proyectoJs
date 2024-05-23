@@ -40,7 +40,8 @@ export class MyElement extends LitElement {
         }
     }
     render() {
-        return html`<div class="principal">
+        return html`
+        <div class="principal">
         <header>
             <div class="header_titulo">
                 <h1>CampusShop</h1>
@@ -59,7 +60,7 @@ export class MyElement extends LitElement {
                     <i class='bx bxs-t-shirt'></i>
                     <h1>Camisas</h1>
                 </button>
-                <button ?active=${this.activeCategory === 'pantalones'} @click=${() => this.changeCategory('pantalon')}>
+                <button ?active=${this.activeCategory === 'pantalon'} @click=${() => this.changeCategory('pantalon')}>
                     <i class='bx bxs-arch'></i>
                     <h1>Pantalones</h1>
                 </button>
@@ -90,7 +91,7 @@ export class MyElement extends LitElement {
         this.requestUpdate();
     }    
     renderProducts(){
-        const filteredProducts = this.products.filter(product => this.activeCategory === 'all' || product.category === this.activeCategory);
+        const filteredProducts = this.products.filter(product => this.activeCategory === 'all' || product.categoria.nombre === this.activeCategory);
         return html `
         <div class="contenido">
             <h2 class="titulo">${this.activeCategory === 'all' ? 'Todos los productos' : this.activeCategory.charAt(0).toUpperCase() + this.activeCategory.slice(1)}</h2>
