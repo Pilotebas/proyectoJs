@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 body {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100vh;
+
     background-color: #AED6F1;
 }
