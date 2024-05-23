@@ -138,7 +138,7 @@ class MyComponent extends HTMLElement {
         console.log(contador);
 
         myComponent.shadowRoot.querySelector("h2").textContent = total;
-
+        window.location.reload();
         carrito.appendChild(myComponent);
       });
 

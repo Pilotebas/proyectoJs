@@ -128,12 +128,14 @@ class MyCardConten extends HTMLElement {
 
     this.shadowRoot.querySelector(".eliminar i").addEventListener("click", () => {
       this.removeItemFromList(id);
-      this.remove();
       // Llama a la función para volver a renderizar los componentes del carrito
-      document.getElementById("carritoContainer").click();
+      window.location.reload();
     });
   }
-
+  attributeChangedCallback(name, old, now) {
+    console.log("micars ", name, old, now);
+    this.render();
+  }
   removeItemFromList(id) {
     let ids = localStorage.getItem("idProduct");
     ids = ids ? ids.split(", ") : [];
@@ -212,7 +214,7 @@ class MyButtonCarrito extends HTMLElement {
     // Agregamos el evento click al botón "Vaciar Carrito"
     this.shadowRoot.getElementById("vaciarCarrito").addEventListener("click", () => {
       this.removeAllItems();
-      // Después de vaciar el carrito, actualizamos el total a cero
+      window.location.reload();
       this.shadowRoot.querySelector("h1 span").textContent = "$0";
     });
   }
@@ -279,9 +281,37 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
+  // Función para manejar el evento personalizado de actualización
+  async function handleUpdateCart() {
+    getAll().then(agregarComponentesCarrito); // Obtener datos y actualizar el carrito
+  }
+
+  // Escuchar el evento personalizado de actualización
+  container.addEventListener("update-cart", handleUpdateCart);
+
   document.getElementById("carritoContainer").addEventListener("click", async () => {
     let jsonOpcion4 = await getAll();
     agregarComponentesCarrito(jsonOpcion4);
   });
-});
 
+  // Evento click en el botón de eliminar dentro de cada carrito-contenido
+  container.addEventListener("click", (event) => {
+    if (event.target.classList.contains("bx-trash")) {
+      const id = event.target.getAttribute("data-id");
+      removeItemAndUpdateCart(id);
+    }
+  });
+
+  // Función para eliminar un elemento y actualizar el carrito
+  function removeItemAndUpdateCart(id) {
+    let ids = localStorage.getItem("idProduct");
+    ids = ids ? ids.split(", ") : [];
+    // Elimina todas las instancias del ID específico de la lista
+    ids = ids.filter((item) => item !== id);
+    localStorage.setItem("idProduct", ids.join(", "));
+    console.log(`Se eliminaron todas las instancias del ID ${id}. Lista actualizada:`, ids);
+
+    // Disparar evento de actualización
+    container.dispatchEvent(new CustomEvent("update-cart"));
+  }
+});
